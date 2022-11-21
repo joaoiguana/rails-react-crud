@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../../app/hooks';
-import { fetchPostsAsync, selectPosts, selectStatus, Statuses } from './postSlice';
+import { fetchPostsAsync, selectPosts, Statuses } from './postSlice';
 import type { AppDispatch } from '../../app/store';
 
 function Posts() {
@@ -14,6 +14,7 @@ function Posts() {
   }, [dispatch])
 
   let contents;
+  let status = Statuses.UpToDate;
 
   if (status !== Statuses.UpToDate) {
     contents = <div>{status}</div>
@@ -32,7 +33,9 @@ function Posts() {
     </div>
   }
 
-  return <div><h1>Posts</h1></div>
+  return <div><h1>Posts</h1>
+    {contents}
+  </div>
 }
 
 export default Posts;
