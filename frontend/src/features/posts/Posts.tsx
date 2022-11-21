@@ -57,7 +57,7 @@ function Posts() {
     </div>
   }
 
-  return <div>
+  return <div className='container posts-container'>
     {contents}
   </div>
 }
