@@ -18,9 +18,9 @@ const Navbar = () => {
       </button>
       <h1 className='navbar-title'>Post.it</h1>
       <nav className='navbar-menu'>
-        <button type='button'>Skills</button>
-        <button type='button'>Awards</button>
-        <button type='button'>Projects</button>
+        <button type='button' className='btn-menu'>Skills</button>
+        <button type='button' className='btn-menu'>Awards</button>
+        <button type='button' className='btn-menu'>Projects</button>
       </nav>
     </div>
   )

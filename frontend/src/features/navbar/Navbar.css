@@ -103,6 +103,10 @@ body.open .navbar-overlay {
   transition: translate 0.3s;
 }
 
+.btn-menu:hover {
+  color: #f2f2f2;
+}
+
 body.open .navbar-menu {
   translate: 0 0;
   visibility: visible;
