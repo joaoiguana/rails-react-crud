@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,400&display=swap');
 
 body {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 .btn-sub {
   border-radius: 0.9rem;
   margin: 0.7rem;
+  border: 0.25rem;
 }
 
 .form-box {
@@ -15,7 +18,7 @@ body {
 }
 
 .form-subtitle {
-  margin-top: 0.75rem;
+  margin-top: 1.5rem;
 }
 
 .posts {
@@ -29,7 +32,7 @@ body {
 }
 
 .posts-container {
-  margin-top: 7.5rem;
+  margin-top: 5rem;
 }
 
 /* .single-post {

@@ -16,8 +16,8 @@ const Navbar = () => {
       >
         <span className='material-icons'>Menu</span>
       </button>
-      <h1 className='navbar-title'>Posts</h1>
-      <nav>
+      <h1 className='navbar-title'>Post.it</h1>
+      <nav className='navbar-menu'>
         <button type='button'>Skills</button>
         <button type='button'>Awards</button>
         <button type='button'>Projects</button>

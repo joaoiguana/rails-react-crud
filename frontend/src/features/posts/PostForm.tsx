@@ -33,7 +33,7 @@ const PostForm = () => {
 
   return (
     <div className='form-box'>
-      <h1>Go ahead, make a post!</h1>
+      <h3>Go ahead, make a post!</h3>
       <form>
         <p className='form-subtitle'>Title <i className="uil uil-link-alt"></i></p>
         <input
