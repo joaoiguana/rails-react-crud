@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+.btn-sub {
+  border-radius: 0.9rem;
+  margin: 0.7rem;
+}
+
+.form-box {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1rem;
+}
+
+.form-subtitle {
+  margin-top: 0.75rem;
+}
+
+.posts {
+  margin: 3em;
+}
+
+@media only screen and (max-width: 800px) {
+  .posts {
+    margin: 1.5em;
+  }
+}
+
+/* .single-post {
+  display: grid;
+} */

@@ -7,6 +7,7 @@ import type { AppDispatch } from '../../app/store';
 import Post from './Post'
 import PostForm from './PostForm';
 import { updatePostAsync } from './postSlice';
+import './Post.css';
 
 function Posts() {
   const posts = useAppSelector(selectPosts);
@@ -39,10 +40,10 @@ function Posts() {
   } else {
     contents = <div className='card'>
       <div className='card-body'>
-        <h3>{status}</h3>
+        {/* <h3>{status}</h3> */}
         <PostForm />
         {posts && posts.length > 0 && posts.map(post => {
-          return <div key={post.id} style={{margin: "5em"}}>
+          return <div className='posts' key={post.id}>
             <Post
               dispatch={dispatch}
               post={post}
@@ -56,7 +57,7 @@ function Posts() {
     </div>
   }
 
-  return <div><h1>Posts</h1>
+  return <div>
     {contents}
   </div>
 }

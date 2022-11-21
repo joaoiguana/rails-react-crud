@@ -49,7 +49,7 @@ const Post = (props:any) => {
 
   return (
     <div>
-      <div className="row">
+      <div className="row single-post">
         <div className="col-8">
           {isEditing ? editableTitle : titleElement}
         </div>

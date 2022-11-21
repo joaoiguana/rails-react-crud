@@ -32,9 +32,10 @@ const PostForm = () => {
   }
 
   return (
-    <div>
-      <h1>Post Form</h1>
+    <div className='form-box'>
+      <h1>Go ahead, make a post!</h1>
       <form>
+        <p className='form-subtitle'>Title <i className="uil uil-link-alt"></i></p>
         <input
           type="text"
           className='form-control text-start'
@@ -42,6 +43,7 @@ const PostForm = () => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
+        <p className='form-subtitle'>Body <i className="uil uil-align-left-justify"></i></p>
         <textarea
           className='form-control text-start'
           name="body"
@@ -50,6 +52,7 @@ const PostForm = () => {
         />
         <button
           type="submit"
+          className='btn-sub'
           onClick={(e: any) => submitHandler(e)}>Submit</button>
       </form>
     </div>
