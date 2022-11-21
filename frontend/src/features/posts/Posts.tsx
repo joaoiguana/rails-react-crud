@@ -1,22 +1,38 @@
 /* eslint-disable no-restricted-globals */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../../app/hooks';
-import { fetchPostsAsync, selectPosts, Statuses } from './postSlice';
+import { fetchPostsAsync, selectPosts, selectStatus, Statuses } from './postSlice';
 import type { AppDispatch } from '../../app/store';
 import Post from './Post'
 import PostForm from './PostForm';
+import { updatePostAsync } from './postSlice';
 
 function Posts() {
   const posts = useAppSelector(selectPosts);
+  const status = useAppSelector(selectStatus)
   const dispatch = useDispatch<AppDispatch>();
+
+  const [postToEdit, setPostToEdit] = useState(0);
 
   useEffect(() =>  {
     dispatch((fetchPostsAsync()));
   }, [dispatch])
 
+  const toggleEditForm = (post_id?:number) => {
+    if (postToEdit === post_id) {
+      setPostToEdit(0);
+    } else {
+      setPostToEdit(post_id as number);
+    }
+  }
+
+  const submitEdit = (formData:any) => {
+    dispatch(updatePostAsync(formData));
+    toggleEditForm();
+  }
+
   let contents;
-  let status = Statuses.UpToDate;
 
   if (status !== Statuses.UpToDate) {
     contents = <div>{status}</div>
@@ -30,6 +46,9 @@ function Posts() {
             <Post
               dispatch={dispatch}
               post={post}
+              toggleEditForm={() => toggleEditForm(post.id)}
+              postToEdit={postToEdit}
+              submitEdit={submitEdit}
             />
           </div>
         })}
